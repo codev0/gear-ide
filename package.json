@@ -1,0 +1,37 @@
+{
+  "name": "gear-ide",
+  "version": "1.0.0",
+  "description": "gear ide",
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "@theia/callhierarchy": "next",
+    "@theia/file-search": "next",
+    "@theia/git": "next",
+    "@theia/markers": "next",
+    "@theia/messages": "next",
+    "@theia/mini-browser": "next",
+    "@theia/navigator": "next",
+    "@theia/outline-view": "next",
+    "@theia/plugin-ext-vscode": "next",
+    "@theia/preferences": "next",
+    "@theia/preview": "next",
+    "@theia/search-in-workspace": "next",
+    "@theia/terminal": "next"
+  },
+  "devDependencies": {
+    "@theia/cli": "next"
+  },
+  "theiaPluginsDir": "plugins",
+  "theiaPlugins": {
+    "vscode-builtin-rust": "https://open-vsx.org/api/vscode/rust/1.57.1/file/vscode.rust-1.57.1.vsix"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn build && yarn run download:plugins",
+    "clean": "theia clean",
+    "build": "theia build",
+    "start": "theia start --plugins=local-dir:plugins",
+    "download:plugins": "theia download:plugins"
+  }
+}
