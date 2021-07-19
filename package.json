@@ -8,7 +8,6 @@
   "dependencies": {
     "@theia/callhierarchy": "next",
     "@theia/file-search": "next",
-    "@theia/git": "next",
     "@theia/markers": "next",
     "@theia/messages": "next",
     "@theia/mini-browser": "next",
